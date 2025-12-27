@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Alltag – Mary</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { margin:0; font-family:Arial; background:#f4f4f4; }
+    nav { background:white; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center; }
+    nav a { margin:0 10px; text-decoration:none; color:#555; }
+    .container {
+      max-width:500px; margin:40px auto;
+      background:white; padding:30px;
+      border-radius:12px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      animation:fadeUp .6s ease;
+      text-align:center;
+    }
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Übersicht</a>
+</nav>
+
+<div class="container">
+  <h2>Alltag & Schönheit</h2>
+  <p>
+    Zwischen Asphalt und Gewohnheit liegt mehr, als man glaubt.<br>
+    Ein Blick, ein Moment, ein Gedanke –<br>
+    und der Tag wird kurz durchlässig.
+  </p>
+  <canvas id="chart"></canvas>
+</div>
+
+<script>
+new Chart(document.getElementById('chart'), {
+  type: 'pie',
+  data: {
+    labels: ['Alltag & Schönheit', 'Rest'],
+    datasets: [{
+      data: [18, 82]
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
 
