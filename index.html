@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Mary – Innere Verteilung</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeUp 0.6s ease;
+      text-align: center;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <a href="dumm.html">Dumm</a>
+  <a href="musik.html">Musik</a>
+  <a href="brooklyn.html">Brooklyn</a>
+  <a href="alltag.html">Alltag</a>
+  <a href="gym.html">Gym</a>
+  <a href="frederik.html">Frederik</a>
+</nav>
+
+<div class="container">
+  <h2>Mary – innere Verteilung</h2>
+  <canvas id="overview"></canvas>
+</div>
+
+<script>
+new Chart(document.getElementById('overview'), {
+  type: 'pie',
+  data: {
+    labels: [
+      'Dumm',
+      'Tolle Musik hören',
+      'Brooklyn gucken',
+      'Alltag & Schönheit',
+      'Gym',
+      'Frederik'
+    ],
+    datasets: [{
+      data: [5.1, 20, 15, 18, 22, 19.9]
+    }]
+  }
+});
+</script>
+
+</body>
+</html>
